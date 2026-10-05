@@ -1,0 +1,11 @@
+== 3.7 the 'best fitted phase interval' is a tautology ==
+   eps_h = 1  <=>  floor((h+1)beta+gamma) > floor(h beta+gamma)  <=>  frac(h beta+gamma) >= 1-beta
+   1-beta = 0.415037 ; observed phase range at eps=1 transitions = [0.4181, 0.9895]
+   so ANY interval [t,1) with t <= 1-beta contains every eps=1 transition and is
+   literally the always-success predictor.  Zero information, as predicted (P2).
+   check over 11542 (M,h) pairs: mismatches = 0
+== 3.8 brute-force recursive tree vs DP vs chain model on HOLDOUT windows ==
+   120 (HOLDOUT window, h) pairs: brute == DP == chain model : True
+== 3.9 the two profile-shift lemmas underlying the theorem ==
+   eps_h=1 and r>=0  =>  l_j(h+1) = l_j(h)+1 for all j<=h : violations 0 / 118197
+   eps_h=0           =>  l_j(h+1) = l_j(h)   for all j<=h : violations 0 / 88908

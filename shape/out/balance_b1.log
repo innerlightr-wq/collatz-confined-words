@@ -1,0 +1,51 @@
+EXPLORE: 47 slopes x 8 windows x h<=200
+rows: 74271 | incremental spot-checks 4, failures 0
+
+== B1.1 are all ties adjacent pairs? ==
+   tied rows: 2858 of 74271 (3.85%)
+   non-adjacent ties: 0
+   number of tied indices: {2: 2225, 3: 633}
+   gap between the two tied indices: {1: 2858}
+
+== B1.2 distribution of the balance margin m, by theta band and r band ==
+   (m = 0 exactly at a tie; small m > 0 = near-tie)
+   median m   |  r   1- 10  r  10- 20  r  20- 40  r  40- 80  r  80-400
+   th 0.13-0.25|    0.0059    0.0009    0.0009    0.0036       -   
+   th 0.25-0.40|    0.0296    0.0051    0.0025    0.0016       -   
+   th 0.40-0.55|    0.0335    0.0089    0.0050    0.0025    0.0017
+   th 0.55-0.70|    0.0338    0.0123    0.0052    0.0024    0.0013
+   th 0.70-0.90|    0.0513    0.0152    0.0060    0.0028    0.0012
+   fraction of rows with m < 0.05 (near-ties), same bands:
+   th 0.13-0.25|    0.656     1.000     1.000     1.000        -   
+   th 0.25-0.40|    0.626     1.000     1.000     1.000        -   
+   th 0.40-0.55|    0.599     1.000     1.000     1.000     1.000 
+   th 0.55-0.70|    0.578     1.000     1.000     1.000     1.000 
+   th 0.70-0.90|    0.467     0.998     1.000     1.000     1.000 
+
+== B1.3 is there a near-tie continuum, or are ties isolated? ==
+   distribution of m in the r band where ties live (r<20), by theta band:
+   theta 0.13-0.25 : n=7469  min 0.0000  q10 0.0000  q25 0.0000  median 0.0010  (exact zeros: 1908)
+   theta 0.25-0.40 : n=2827  min 0.0000  q10 0.0000  q25 0.0010  median 0.0077  (exact zeros: 363)
+   theta 0.40-0.55 : n=3329  min 0.0000  q10 0.0005  q25 0.0043  median 0.0116  (exact zeros: 259)
+   theta 0.55-0.70 : n=3923  min 0.0000  q10 0.0012  q25 0.0070  median 0.0161  (exact zeros: 265)
+   theta 0.70-0.90 : n=1134  min 0.0000  q10 0.0029  q25 0.0101  median 0.0200  (exact zeros: 63)
+
+== B1.4 S4 (distance to the best-fit ideal kernel) vs theta at matched r ==
+   median S4    |  r   1- 10  r  10- 20  r  20- 40  r  40- 80  r  80-400
+   th 0.13-0.25 |    0.0479    0.0226    0.0106    0.0137       -   
+   th 0.25-0.40 |    0.0496    0.0196    0.0101    0.0073       -   
+   th 0.40-0.55 |    0.0519    0.0279    0.0184    0.0120    0.0095
+   th 0.55-0.70 |    0.0672    0.0467    0.0339    0.0210    0.0141
+   th 0.70-0.90 |    0.0860    0.0786    0.0719    0.0646    0.0494
+
+== B1.5 does the peak sit at the ideal balance point k_fit - 2 ? ==
+   tied rows    n= 2858  peak - (k_fit-2): {-1: 767, 0: 2087, 1: 4}  | within 1: 1.000
+   untied rows  n= 7205  peak - (k_fit-2): {0: 3298, 1: 3904, 2: 3}  | within 1: 1.000
+
+== B1.6 margin m vs top-irregularity D (the mechanism's core claim) ==
+   pooled over everything: spearman(m, D) = -0.0106 (n=74120)
+   NOTE: D is ~ 11*theta by construction, so the pooled figure largely restates theta.
+   within-slope (theta fixed) spearman(m, D):
+   47 slopes: median -0.0776, mean -0.0271, sd 0.1342, fraction > 0: 0.255
+   within (slope, r-band) spearman(m, D) -- removes r as well:
+   211 (slope,r-band) cells: median -0.0176, fraction > 0: 0.441

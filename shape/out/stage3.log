@@ -1,0 +1,33 @@
+== 3.1 convergent-coincidence null ==
+   fraction of integers 1..N within tol of a convergent denominator of the slope
+   sqrt2-1 [0;2,2,2,...]    q_k<=400: [2, 5, 12, 29, 70, 169]
+        tol=1 -> 4.5% of 1..400 qualify
+        tol=2 -> 6.8% of 1..400 qualify
+   [0;3,3,3,...]            q_k<=400: [3, 10, 33, 109, 360]
+        tol=1 -> 3.8% of 1..400 qualify
+        tol=2 -> 6.2% of 1..400 qualify
+   liouville a_7=50         q_k<=400: [1, 2, 3, 5, 8, 13]
+        tol=1 -> 3.0% of 1..400 qualify
+        tol=2 -> 3.8% of 1..400 qualify
+   liouville a_5=50         q_k<=400: [1, 2, 3, 5, 253, 258]
+        tol=1 -> 3.0% of 1..400 qualify
+        tol=2 -> 4.2% of 1..400 qualify
+   liouville a_3=500        q_k<=400: [1, 2]
+        tol=1 -> 0.8% of 1..400 qualify
+        tol=2 -> 1.0% of 1..400 qualify
+   e-2                      q_k<=400: [1, 3, 4, 7, 32, 39, 71]
+        tol=1 -> 4.2% of 1..400 qualify
+        tol=2 -> 6.0% of 1..400 qualify
+   (small-denominator slopes make 'near a convergent' almost automatic; any such
+    claim must be scored against this rate.)
+== 3.2 shuffled-CF control: same partial-quotient multiset, shuffled order ==
+   fitted cubic in theta on the 18 EXPLORE slopes; residual sd: U_var 0.0034, U_loc 0.0059
+   built 16 shuffled-CF slopes (same multiset, different order -> different theta)
+   deviation of shuffled-CF slopes from the EXPLORE theta-curve:
+      U_var: mean +0.0071, sd 0.0219, max|dev| 0.0827
+      U_loc: mean -0.0022, sd 0.0125, max|dev| 0.0343
+   -> shuffling the CF (which changes Diophantine type but keeps the multiset) moves the
+      statistics only along the theta-curve; the curve itself is unchanged.
+== 3.3 resonance test: do residuals spike when h is near a convergent denominator? ==
+   U_loc  |resid| near q_k (n= 338) 0.0669 vs far (n=8325) 0.0709 ; diff -0.0040 ; random-denominator null p=0.429
+   U_var  |resid| near q_k (n= 338) 0.0395 vs far (n=8325) 0.0406 ; diff -0.0011 ; random-denominator null p=0.776

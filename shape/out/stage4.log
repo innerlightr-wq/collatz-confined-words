@@ -1,0 +1,55 @@
+HOLDOUT slopes (19): golden [0;1,1,1,...], sqrt3-1 [0;1,2,1,2,...], liouville a_5=500, liouville a_7=500, liouville a_3=50, pi-3, beta = log2(3)-1, random#06, random#05, random#10, random#08, random#09, random#02, random#19, random#18, random#17, random#07, rational 144/233, rational 55/89
+HOLDOUT rows: 16036 (2375 at extended horizons h=160..400)
+== 4.1 P1: untied mode for K >= 17 ==
+   K >=  1 : 16036 rows,  892 tied (5.562%)
+   K >=  5 : 15046 rows,  628 tied (4.174%)
+   K >= 10 : 13762 rows,  220 tied (1.599%)
+   K >= 15 : 12474 rows,   57 tied (0.457%)
+   K >= 17 : 11959 rows,   28 tied (0.234%)
+   K >= 20 : 11189 rows,    0 tied (0.000%)
+   P1 verdict: ties at K>=17 : 28  -> FALSIFIED
+   (extended horizons h=160..400 with K>=17: 2375 rows, 0 ties)
+== 4.2 P2: frozen theta-curve vs measured, per HOLDOUT slope (K>=20) ==
+   slope                      theta     U_var pred  meas   resid | U_loc pred  meas   resid
+   random#19                  0.138380  +1.9798 +1.9912 +0.0114 | -0.2340 -0.1833 +0.0507  <-- EXTRAPOLATION
+   pi-3                       0.141593  +1.9786 +1.9909 +0.0123 | -0.2347 -0.1859 +0.0487  <-- EXTRAPOLATION
+   random#10                  0.207594  +1.9572 +1.9636 +0.0063 | -0.2462 -0.2253 +0.0209
+   random#05                  0.211815  +1.9560 +1.9629 +0.0069 | -0.2468 -0.2249 +0.0219
+   random#02                  0.356017  +1.9106 +1.9218 +0.0112 | -0.2697 -0.2492 +0.0205
+   random#08                  0.409512  +1.8850 +1.9074 +0.0224 | -0.2857 -0.2518 +0.0339
+   random#18                  0.418985  +1.8795 +1.9002 +0.0207 | -0.2893 -0.2583 +0.0309
+   random#06                  0.435276  +1.8694 +1.8871 +0.0176 | -0.2961 -0.2692 +0.0268
+   liouville a_3=50           0.504891  +1.8140 +1.8403 +0.0264 | -0.3360 -0.3029 +0.0331
+   beta = log2(3)-1           0.584963  +1.7190 +1.7474 +0.0284 | -0.4092 -0.3879 +0.0212
+   liouville a_5=500          0.600080  +1.6966 +1.7269 +0.0303 | -0.4269 -0.4053 +0.0216
+   random#09                  0.606854  +1.6860 +1.7207 +0.0347 | -0.4353 -0.4077 +0.0277
+   liouville a_7=500          0.615396  +1.6722 +1.7138 +0.0416 | -0.4463 -0.4119 +0.0344
+   rational 55/89             0.617978  +1.6679 +1.7111 +0.0432 | -0.4498 -0.4132 +0.0366
+   rational 144/233           0.618026  +1.6679 +1.7111 +0.0432 | -0.4498 -0.4132 +0.0367
+   golden [0;1,1,1,...]       0.618034  +1.6678 +1.7111 +0.0433 | -0.4498 -0.4132 +0.0367
+   random#17                  0.648797  +1.6131 +1.6591 +0.0460 | -0.4940 -0.4471 +0.0469
+   sqrt3-1 [0;1,2,1,2,...]    0.732051  +1.4257 +1.4842 +0.0585 | -0.6478 -0.6059 +0.0419  <-- EXTRAPOLATION
+   random#07                  0.814995  +1.1733 +1.2609 +0.0875 | -0.8588 -0.8180 +0.0408  <-- EXTRAPOLATION
+   in-range slopes (15): U_var resid sd 0.0133 max|.| 0.0460  (predicted <=0.02 / <=0.08)
+                        U_loc resid sd 0.0076 max|.| 0.0469  (predicted <=0.03 / <=0.08)
+   P2 verdict: HOLDS
+   extrapolation slope random#19              U_var resid +0.0114  U_loc resid +0.0507
+   extrapolation slope pi-3                   U_var resid +0.0123  U_loc resid +0.0487
+   extrapolation slope sqrt3-1 [0;1,2,1,2,...] U_var resid +0.0585  U_loc resid +0.0419
+   extrapolation slope random#07              U_var resid +0.0875  U_loc resid +0.0408
+== 4.3 P4: rational vs badly-approximable vs Liouville at essentially equal theta ==
+   golden [0;1,1,1,...]     theta=0.6180340  U_var=+1.71110  U_loc=-0.41316  [bounded]
+   rational 144/233         theta=0.6180258  U_var=+1.71110  U_loc=-0.41316  [rational]
+   rational 55/89           theta=0.6179775  U_var=+1.71110  U_loc=-0.41316  [rational]
+   liouville a_7=500        theta=0.6153964  U_var=+1.71378  U_loc=-0.41193  [liouville]
+   spread across these 4 slopes: U_var 0.00268, U_loc 0.00124  (predicted U_var < 0.01)
+   P4 verdict: HOLDS
+== 4.4 P3: does the CF block add anything out of sample? ==
+   U_var  out-of-sample RMSE  B1t 0.0538 -> CFt 0.0532  (+1.0% ; predicted <5% gain)
+   U_loc  out-of-sample RMSE  B1t 0.0845 -> CFt 0.0834  (+1.3% ; predicted <5% gain)
+== 4.5 P3: CF features vs per-slope HOLDOUT residuals of B1t ==
+   U_var  log max a_k r=+0.333 p=0.1665 | log sum a_k r=+0.191 p=0.4164 | discrepancy r=-0.053 p=0.9213
+   U_loc  log max a_k r=+0.263 p=0.2664 | log sum a_k r=+0.139 p=0.5591 | discrepancy r=+0.031 p=0.8393
+== 4.6 P3: resonance test on HOLDOUT ==
+   U_var  near q_k (n= 401) 0.0484 vs far (n=10788) 0.0438 ; diff +0.0046 ; null p=0.137
+   U_loc  near q_k (n= 401) 0.0841 vs far (n=10788) 0.0729 ; diff +0.0111 ; null p=0.007

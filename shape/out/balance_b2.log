@@ -1,0 +1,50 @@
+HOLDOUT slopes (8), theta spread over [0.15,0.9]:
+   hold-random#0    theta=0.236587267
+   hold-random#1    theta=0.318620451
+   hold-random#2    theta=0.361824416
+   hold-random#3    theta=0.460631903
+   hold-random#4    theta=0.543916881
+   hold-random#5    theta=0.637444558
+   hold-random#6    theta=0.765525101
+   hold-random#7    theta=0.877063393
+windows [(2, 1), (4, 2), (7, 1)] ; h <= 400
+HOLDOUT rows: 9567
+
+== P1: all ties adjacent ==
+   ties 71 / 9567 ; non-adjacent: 0 ; run lengths: {2: 46, 3: 25} ; gaps: {1: 71}
+   P1 verdict: HOLDS
+
+== P2: margin m vs top-irregularity D, within (slope, r-band) ==
+   32 cells: median Spearman -0.1176, fraction positive 0.250
+   frozen prediction: FAILS, median in [-0.10,+0.10] and fraction in [0.35,0.65]
+   P2 verdict: prediction NOT CONFIRMED (mechanism's own claim of a positive relation: REJECTED)
+
+== P3: at matched r (band 10-20), m and S4 vs theta ==
+   theta 0.15-0.30 : n= 126  median m 0.009901   median S4 0.0266
+   theta 0.30-0.45 : n= 177  median m 0.010651   median S4 0.0218
+   theta 0.45-0.60 : n= 120  median m 0.012146   median S4 0.0384
+   theta 0.60-0.75 : n=  47  median m 0.015638   median S4 0.0497
+   theta 0.75-0.90 : n=  73  median m 0.013781   median S4 0.0890
+   m ratio (highest/lowest theta band) = 1.39 (predicted >= 3)
+   S4 ratio                            = 3.34 (predicted >= 1.5)
+   Spearman(theta, m) = +0.2006, permutation p = 0.0005 (predicted > 0, p < 0.05)
+   P3 verdict: FAILS
+
+== P4 / P4': the ideal balance point ==
+   tied   n=   71 : within 1 of k_fit-2 = 1.0000 ; exactly k_fit-2 = 0.4366
+   untied n=  952 : within 1 of k_fit-2 = 0.9937 ; exactly k_fit-2 = 0.3571
+   P4 (as stated) is vacuous if both 'within 1' rates are >= 0.99: CONFIRMED vacuous
+   P4' : tied 0.437 - untied 0.357 = +0.079 (predicted >= +0.15) -> FAILS
+
+== P5: ties as a small-integer coincidence ==
+   largest Pi(peak) carrying a tie: 1,001 (4 digits) ; predicted < 10^10 -> HOLDS
+   rows with r >= 20: 8534 ; ties there: 0 -> HOLDS
+   r band    n     tie rate   median m     median |Delta|            10%-most-balanced tie rate
+     1-  5    202   0.2079    0.470004    3                        1.0000
+     5- 10    273   0.1062    0.019978    16                       1.0000
+    10- 15    272   0.0000    0.013303    7,688                    0.0000
+    15- 20    271   0.0000    0.009815    4,527,348                0.0000
+    20- 30    546   0.0000    0.007044    79,352,447,270           0.0000
+    30- 50   1089   0.0000    0.003864    34,576,642,239,843,393,066 0.0000
+    50-100   2661   0.0000    0.001944    5,626,900,626,107,377,615,274,209,400,623,984,099,876 0.0000
+   100-400   4238   0.0000    0.000721    15,833,286,532,821,647,485,176,126,181,475,649,109,051,605,993,165,379,173,972,750,359,151,955,637,609,002,655,130,058,752 0.0000

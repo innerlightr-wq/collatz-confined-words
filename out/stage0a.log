@@ -1,0 +1,7 @@
+== 0.1 brute tree vs DP(literal) vs DP(closed form) vs reduced chain model ==
+  windows tested: 8 ; (window,h) pairs: 120 ; all four agree: True
+== 0.2 window -> (M,E) collapse ==
+  135 candidate windows -> 15 distinct (M,E) classes; collapse exact: True
+== 0.3 generalized d* closed form, global eps_h, clipping ==
+  reachable states checked: 13532 ; d* closed form exact: True ; eps_h global/Sturmian: True
+  min d* over all reachable states = 2  (clipping d*<=0 never occurs; d*>=2)

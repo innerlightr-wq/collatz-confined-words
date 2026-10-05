@@ -1,0 +1,30 @@
+rows: 74271
+
+== B1.7 relative margin m vs absolute integer gap |Delta| at the peak, by r ==
+   r band    n     tie rate   median m    median |Delta|   median digits of Pi(peak)
+     1-  5   3953   0.2100    0.470004    3                1
+     5- 10   4962   0.3116    0.010471    5                3
+    10- 15   4966   0.0818    0.007868    2,682            6
+    15- 20   4952   0.0153    0.006057    1,875,119        9
+    20- 30   9731   0.0000    0.003978    25,644,424,357   13
+    30- 50  14764   0.0000    0.003420    4,549,205,564,007,866,880 21
+    50-100  22712   0.0000    0.001895    33,657,282,799,404,039,677,801,498,771,013,500,928 40
+   100-400   8231   0.0000    0.001130    3,045,068,546,902,364,234,934,880,148,088,209,899,792,808,140,818,653,918,599,682,539 67
+
+   -> the relative margin SHRINKS with r (profile gets more balanced) while the
+      absolute integer gap EXPLODES.  Ties follow |Delta|, not m.
+
+== B1.8 condition on near-balance: among the most balanced rows, how many tie? ==
+   r   1-  5 : 10% most balanced (m <= 0.000000) -> tie rate 1.0000   (band tie rate 0.2183)
+   r   5- 10 : 10% most balanced (m <= 0.000000) -> tie rate 1.0000   (band tie rate 0.3116)
+   r  10- 15 : 10% most balanced (m <= 0.000001) -> tie rate 0.8185   (band tie rate 0.0818)
+   r  15- 20 : 10% most balanced (m <= 0.000018) -> tie rate 0.1535   (band tie rate 0.0153)
+   r  20- 30 : 10% most balanced (m <= 0.000036) -> tie rate 0.0000   (band tie rate 0.0000)
+   r  30- 50 : 10% most balanced (m <= 0.000315) -> tie rate 0.0000   (band tie rate 0.0000)
+   r  50-100 : 10% most balanced (m <= 0.000387) -> tie rate 0.0000   (band tie rate 0.0000)
+   r 100-400 : 10% most balanced (m <= 0.000256) -> tie rate 0.0000   (band tie rate 0.0000)
+
+== B1.9 the same, expressed as: does a tie need a SMALL profile? ==
+   tied rows   : median Pi(peak) digits 3, max 9
+   untied rows : median Pi(peak) digits 23, max 101
+   largest Pi(peak) at which ANY tie occurs: 300,540,195 (9 digits)

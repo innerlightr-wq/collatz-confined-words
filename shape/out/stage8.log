@@ -1,0 +1,52 @@
+10 new random-CF slopes (seed 20261006), all exact for n <= 620, none shared with the earlier set:
+   new-random#00    theta=0.175079178  CF head [5, 1, 2, 2, 7, 2, 7, 2]
+   new-random#01    theta=0.879073213  CF head [1, 7, 3, 1, 2, 2, 5, 1]
+   new-random#02    theta=0.688809655  CF head [1, 2, 4, 1, 2, 5, 1, 7]
+   new-random#03    theta=0.817107683  CF head [1, 4, 2, 7, 4, 5, 1, 2]
+   new-random#04    theta=0.586427045  CF head [1, 1, 2, 2, 1, 1, 4, 1]
+   new-random#05    theta=0.784890119  CF head [1, 3, 1, 1, 1, 5, 1, 1]
+   new-random#06    theta=0.318613679  CF head [3, 7, 4, 1, 1, 1, 5, 4]
+   new-random#07    theta=0.184760050  CF head [5, 2, 2, 2, 1, 4, 1, 1]
+   new-random#08    theta=0.226828277  CF head [4, 2, 2, 4, 4, 5, 1, 3]
+   new-random#09    theta=0.560564873  CF head [1, 1, 3, 1, 1, 1, 2, 5]
+windows: [(4, 2), (7, 1), (11, 2)] ; horizons 1..600
+rows: 17920 ; incremental-advance spot-checks against the direct chain count: 210, failures: 0
+
+== 8.1 ties by window, reported in r ==
+   window   rows    r range     #ties   largest r with a tie   smallest tie-free r
+   ( 4,2)   5967     1..526       98      9                    r >= 10
+   ( 7,1)   5989     1..527       42      6                    r >= 7
+   (11,2)   5964     1..527      120     12                    r >= 13
+   ALL      17920     1..527      260     12                    r >= 13
+
+== 8.2 the same ties expressed in K, for comparison with the earlier runs ==
+   ( 4,2) largest K with a tie: 9
+   ( 7,1) largest K with a tie: 5
+   (11,2) largest K with a tie: 13
+   ALL    largest K with a tie: 13
+
+== 8.3 the thresholds under test (fixed before this run; NOT adjusted) ==
+   r >= 20 (conjecture, REPORT.md section 7)  : 16366 rows, 0 ties -> HOLDS
+   K >= 19 (observed in the earlier study)    : 16353 rows, 0 ties -> HOLDS
+
+== 8.4 tie frequency by r, pooled over the three windows ==
+   r   1-  5 :   329 rows,   76 tied (23.100%)
+   r   5- 10 :   407 rows,  168 tied (41.278%)
+   r  10- 15 :   411 rows,   16 tied (3.893%)
+   r  15- 20 :   407 rows,    0 tied (0.000%)
+   r  20- 25 :   406 rows,    0 tied (0.000%)
+   r  25- 40 :  1227 rows,    0 tied (0.000%)
+   r  40- 80 :  3273 rows,    0 tied (0.000%)
+   r  80-400 : 10360 rows,    0 tied (0.000%)
+
+== 8.5 per-slope largest tie r (are ties concentrated in particular slopes?) ==
+   new-random#00    theta=0.175079  ties=  79  largest r with a tie: 9
+   new-random#01    theta=0.879073  ties=   3  largest r with a tie: 4
+   new-random#02    theta=0.688810  ties=   3  largest r with a tie: 5
+   new-random#03    theta=0.817108  ties=   5  largest r with a tie: 5
+   new-random#04    theta=0.586427  ties=   6  largest r with a tie: 4
+   new-random#05    theta=0.784890  ties=   4  largest r with a tie: 5
+   new-random#06    theta=0.318614  ties=  25  largest r with a tie: 7
+   new-random#07    theta=0.184760  ties=  86  largest r with a tie: 12
+   new-random#08    theta=0.226828  ties=  39  largest r with a tie: 8
+   new-random#09    theta=0.560565  ties=  10  largest r with a tie: 5

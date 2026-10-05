@@ -1,0 +1,41 @@
+== 5.1 the tie threshold: P1 used K>=17, fitted on EXPLORE; what holds on both halves? ==
+   K>=15 : EXPLORE   11 ties /  9792 ; HOLDOUT   57 ties / 12474
+   K>=16 : EXPLORE    6 ties /  9572 ; HOLDOUT   42 ties / 12222
+   K>=17 : EXPLORE    0 ties /  9342 ; HOLDOUT   28 ties / 11959
+   K>=18 : EXPLORE    0 ties /  9113 ; HOLDOUT   14 ties / 11700
+   K>=19 : EXPLORE    0 ties /  8885 ; HOLDOUT    0 ties / 11442
+   K>=20 : EXPLORE    0 ties /  8663 ; HOLDOUT    0 ties / 11189
+   K>=21 : EXPLORE    0 ties /  8433 ; HOLDOUT    0 ties / 10949
+   K>=25 : EXPLORE    0 ties /  7515 ; HOLDOUT    0 ties / 10171
+   the 28 HOLDOUT ties with K in 17..19:
+     slopes: {'pi-3': 14, 'random#19': 14}
+     K values: {17: 14, 18: 14} ; windows: {(13, '3'): 28}
+   -> K>=17 was an EXPLORE artifact; K>=20 is tie-free on BOTH halves (0/8663 and 0/11189).
+== 5.2 P2 residuals: is the positive bias caused by the extended horizons? ==
+   h<=150 only (matches the EXPLORE range) n_slopes=15  mean resid +0.0006  sd 0.0043  max|.| 0.0084
+   h=160..400 only (extended)             n_slopes=15  mean resid +0.1479  sd 0.0804  max|.| 0.2570
+   all                                    n_slopes=15  mean resid +0.0281  sd 0.0133  max|.| 0.0460
+   -> the bias is a finite-size (r) effect: the curve was fitted at h<=150 and the
+      statistics still drift with r, so extended horizons sit slightly off it.
+== 5.3 the U_loc resonance (p=0.007): confounded with h? ==
+   raw: near 0.0841 (n=401) vs far 0.0729 (n=10788)
+   h distribution: near mean h=85.7, far mean h=138.1
+   residual vs h (all HOLDOUT rows): corr = -0.323
+   within h-bins (removes the h confound):
+      h  20- 60 : near 0.1073 (n=152) vs far 0.1132 (n=1243)  diff -0.0059
+      h  60-100 : near 0.0801 (n=114) vs far 0.0844 (n=2904)  diff -0.0043
+      h 100-150 : near 0.0633 (n=105) vs far 0.0636 (n=4201)  diff -0.0002
+      h 150-250 : near 0.0541 (n= 30) vs far 0.0554 (n= 920)  diff -0.0013
+   mean within-bin difference: -0.0030 (raw difference was +0.0111)
+   h-stratified permutation p = 0.1694  (unstratified was 0.007)
+== 5.4 is the effect carried by one slope? ==
+   random#17                near 0.1111 (n=27) far 0.0746 (n= 675) diff +0.0365
+   beta = log2(3)-1         near 0.0876 (n=49) far 0.0574 (n= 636) diff +0.0302
+   sqrt3-1 [0;1,2,1,2,...]  near 0.1076 (n=55) far 0.0821 (n= 663) diff +0.0255
+   random#02                near 0.0657 (n=15) far 0.0574 (n= 565) diff +0.0083
+   golden [0;1,1,1,...]     near 0.0926 (n=76) far 0.0844 (n= 617) diff +0.0081
+   random#18                near 0.0702 (n=30) far 0.0637 (n= 590) diff +0.0065
+== 5.5 multiple-comparison accounting ==
+   resonance tests run: 2 statistics x 2 halves = 4.  Results: EXPLORE U_loc p=0.43,
+   EXPLORE U_var p=0.78, HOLDOUT U_var p=0.137, HOLDOUT U_loc p=0.007 (unstratified).
+   The EXPLORE U_loc test had the OPPOSITE sign (near < far).

@@ -1,0 +1,41 @@
+== 0.4 W0 (M=2,c=1,prefix (1),V_min=4 -> E=1): T0 and T1 ==
+  E(W0) = 1   gamma_W = frac(M*alpha) = 0.169925
+  T1 convention propagate_bump=False : eps=1 transitions 89, exact 89
+  T0 (eps=0) transitions 62, exact 62  [margin 2]
+  T1 convention propagate_bump=True : eps=1 transitions 89, exact 1
+  T0 with NO margin (j<=h): 62/62 exact
+  N_h(h) == 0 for all h (exhaustion clause never fires): True
+== 0.5 W0 Haar-weighted bulk statistics (weights N_h(j)*2^-j) ==
+  h= 40  mode j*=19 (ties [19])  E[J]=20.0682  Var=33.1794  C_W=27  C_note=26
+  h= 60  mode j*=31 (ties [31])  E[J]=32.0116  Var=55.9180  C_W=39  C_note=38
+  h= 80  mode j*=42 (ties [42])  E[J]=42.9982  Var=77.5069  C_W=50  C_note=49
+  h=100  mode j*=54 (ties [54])  E[J]=54.9939  Var=101.3434  C_W=62  C_note=61
+  mode j*(h) = K(h)-1 holds with K(h)=C_note(h)-C_note(5)
+  E[J]-K = ['+0.068', '+0.012', '-0.002', '-0.006']   Var/K = ['1.659', '1.747', '1.802', '1.843']
+  mode j*(h) = K(h)-1 holds with K(h)=C_W(h)-C_W(5)
+  E[J]-K = ['+0.068', '+0.012', '-0.002', '-0.006']   Var/K = ['1.659', '1.747', '1.802', '1.843']
+== 0.6 M=3 windows: T0, and the T1 failure ==
+  M=3,E=1 : T0 63/63 exact | T1 88/88 exact
+  M=3,E=2 : T0 63/63 exact | T1 88/88 exact
+  M=3,E=3 : T0 63/63 exact | T1 87/88 exact
+  M=3,E=4 : T0 63/63 exact | T1 86/88 exact
+  margin sensitivity (M=3): #exact T1 out of #eps=1, by excluded margin
+    M=2 E=1  margins 0,1,2,3,5,8 -> 46/46 46/46 46/46 46/46 46/46 46/46
+    M=2 E=2  margins 0,1,2,3,5,8 -> 45/46 45/46 45/46 45/46 45/46 45/46
+    M=3 E=1  margins 0,1,2,3,5,8 -> 46/46 46/46 46/46 46/46 46/46 46/46
+    M=3 E=2  margins 0,1,2,3,5,8 -> 46/46 46/46 46/46 46/46 46/46 46/46
+    M=4 E=1  margins 0,1,2,3,5,8 -> 47/47 47/47 47/47 47/47 47/47 47/47
+    M=4 E=2  margins 0,1,2,3,5,8 -> 46/47 46/47 46/47 46/47 46/47 46/47
+    M=5 E=1  margins 0,1,2,3,5,8 -> 46/46 46/46 46/46 46/46 46/46 46/46
+    M=5 E=2  margins 0,1,2,3,5,8 -> 46/46 46/46 46/46 46/46 46/46 46/46
+    M=6 E=1  margins 0,1,2,3,5,8 -> 46/46 46/46 46/46 46/46 46/46 46/46
+    M=6 E=2  margins 0,1,2,3,5,8 -> 46/46 46/46 46/46 46/46 46/46 46/46
+  residual anatomy, M=3 E=1, first failing transitions (margin 2):
+    h= 2  EXACT
+    h= 3  EXACT
+    h= 5  EXACT
+    h= 7  EXACT
+    h= 8  EXACT
+    h=10  EXACT
+    h=12  EXACT
+    h=14  EXACT

@@ -1,0 +1,26 @@
+== 0.10 hypothesis: transitions were selected with the M=2 clock, tree computed for M=3 ==
+   (i.e. eps was taken as eps^{M=2}_h = e_{2+h} while the window needs e_{3+h})
+   H=95 : selected 56 transitions, of which 16 have the M=3 digit also =1
+        success horizons: [3, 8, 15, 20, 27, 32, 39, 44, 49, 56, 61, 68, 73, 80, 85, 92]
+        gaps between successes: [5, 7, 5, 7, 5, 7, 5, 5, 7, 5, 7, 5, 7, 5, 7]   (distinct: [5, 7])
+   H=96 : selected 56 transitions, of which 16 have the M=3 digit also =1
+        success horizons: [3, 8, 15, 20, 27, 32, 39, 44, 49, 56, 61, 68, 73, 80, 85, 92]
+        gaps between successes: [5, 7, 5, 7, 5, 7, 5, 5, 7, 5, 7, 5, 7, 5, 7]   (distinct: [5, 7])
+== 0.11 verification that T1 for the M=3 window holds exactly at e_{3+h}=1 and
+        necessarily fails at e_{3+h}=0 (where the true transition is T0=identity) ==
+   M=3,E=1 : at e_{3+h}=1 T1 exact 58/58 ; at e_{3+h}=0 T1 exact 0/41 (T0 regime)
+   M=3,E=2 : at e_{3+h}=1 T1 exact 58/58 ; at e_{3+h}=0 T1 exact 0/41 (T0 regime)
+== 0.12 calibration: are gaps {5,7,12} evidence of anything? ==
+   Sturmian return times of the factor '11' (slope beta=log2(3/2)):
+   gap multiset over 4000 horizons: {5: 379, 7: 300}
+   convergent denominators of beta=[0;1,1,2,2,3,1,5,2,23,...]: 1,2,5,12,41,53,...
+   -> by the three-distance theorem the return times of ANY Sturmian factor take
+      at most 3 values, which are automatically of the form q_k, q_k+q_{k-1}, q_{k+1}.
+   So 'gaps near convergents' is forced for any such set, carrying no information.
+== 0.13 chance calibration: P(random small integer is 'near a convergent') ==
+   tol=0, integers 1..15 : 60% are 'near a convergent/semiconvergent'
+   tol=0, integers 1..30 : 43% are 'near a convergent/semiconvergent'
+   tol=1, integers 1..15 : 87% are 'near a convergent/semiconvergent'
+   tol=1, integers 1..30 : 80% are 'near a convergent/semiconvergent'
+   tol=2, integers 1..15 : 100% are 'near a convergent/semiconvergent'
+   tol=2, integers 1..30 : 100% are 'near a convergent/semiconvergent'

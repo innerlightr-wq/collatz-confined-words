@@ -1,0 +1,27 @@
+== U_var : one cubic in theta per r-bin ==
+   r-bin     EXPLORE->HOLDOUT (out-of-sample)        HOLDOUT-only (slope agreement)
+    20- 30  n_sl=15 rmse 0.0107 max 0.0223   n_sl=15  resid sd 0.0087  (df=11)
+    30- 40  n_sl=15 rmse 0.0071 max 0.0134   n_sl=15  resid sd 0.0057  (df=11)
+    40- 55  n_sl=15 rmse 0.0158 max 0.0465   n_sl=15  resid sd 0.0038  (df=11)
+    55- 75  n_sl=15 rmse 0.0378 max 0.1141   n_sl=15  resid sd 0.0029  (df=11)
+    75-105  n_sl=15 rmse 0.1701 max 0.5215   n_sl=15  resid sd 0.0023  (df=11)
+   105-150    (insufficient overlap)            n_sl=13  resid sd 0.0011  (df=9)
+   150-260    (insufficient overlap)            n_sl=12  resid sd 0.0012  (df=8)
+== U_loc : one cubic in theta per r-bin ==
+   r-bin     EXPLORE->HOLDOUT (out-of-sample)        HOLDOUT-only (slope agreement)
+    20- 30  n_sl=15 rmse 0.0105 max 0.0231   n_sl=15  resid sd 0.0092  (df=11)
+    30- 40  n_sl=15 rmse 0.0076 max 0.0159   n_sl=15  resid sd 0.0068  (df=11)
+    40- 55  n_sl=15 rmse 0.0308 max 0.0922   n_sl=15  resid sd 0.0063  (df=11)
+    55- 75  n_sl=15 rmse 0.1276 max 0.3881   n_sl=15  resid sd 0.0047  (df=11)
+    75-105  n_sl=15 rmse 0.7697 max 2.3580   n_sl=15  resid sd 0.0055  (df=11)
+   105-150    (insufficient overlap)            n_sl=13  resid sd 0.0023  (df=9)
+   150-260    (insufficient overlap)            n_sl=12  resid sd 0.0025  (df=8)
+== 7.2 the four near-equal-theta slopes, at matched r ==
+   r  20- 40 : golden 1.50256(n=141) | rational 1.50256(n=141) | rational 1.50256(n=141) | liouville 1.50775(n=142)
+              spread = 0.00519
+   r  40- 70 : golden 1.68362(n=241) | rational 1.68362(n=241) | rational 1.68362(n=241) | liouville 1.68741(n=244)
+              spread = 0.00379
+   r  70-110 : golden 1.78615(n=197) | rational 1.78615(n=197) | rational 1.78615(n=197) | liouville 1.78991(n=194)
+              spread = 0.00376
+   r 110-260 : golden 1.89744(n=114) | rational 1.89744(n=114) | rational 1.89742(n=114) | liouville 1.89892(n=113)
+              spread = 0.00150

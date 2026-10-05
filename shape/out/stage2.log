@@ -1,0 +1,33 @@
+rows with K>=20: 8663 over 18 slopes
+== 2.1 universality of the single untied mode ==
+   K >=  1 : 12955 rows,  523 tied (4.037%)
+   K >=  5 : 12074 rows,  301 tied (2.493%)
+   K >= 10 : 10937 rows,   84 tied (0.768%)
+   K >= 15 :  9792 rows,   11 tied (0.112%)
+   K >= 17 :  9342 rows,    0 tied (0.000%)
+   K >= 20 :  8663 rows,    0 tied (0.000%)
+   -> no tie anywhere with K >= 17 on EXPLORE; ties are a small-K effect, not a slope effect.
+== 2.2 normalized statistics (intrinsic parameter r = ell_0) ==
+   U_loc = (mean-r)/sqrt(r)
+      r  20- 40 n=3735  pooled -0.3679+-0.1600 | between-slope sd 0.1458, within-slope sd 0.0935
+      r  40- 60 n=2712  pooled -0.3451+-0.1381 | between-slope sd 0.1175, within-slope sd 0.0781
+      r  60- 90 n=2006  pooled -0.3556+-0.1157 | between-slope sd 0.0879, within-slope sd 0.0711
+      r  90-200 n= 194  pooled -0.4528+-0.0881 | between-slope sd 0.0471, within-slope sd 0.0583
+   U_var = Var/r
+      r  20- 40 n=3735  pooled 1.7868+-0.1946 | between-slope sd 0.2027, within-slope sd 0.0685
+      r  40- 60 n=2712  pooled 1.8009+-0.1454 | between-slope sd 0.1476, within-slope sd 0.0448
+      r  60- 90 n=2006  pooled 1.7884+-0.1074 | between-slope sd 0.1033, within-slope sd 0.0354
+      r  90-200 n= 194  pooled 1.6899+-0.0847 | between-slope sd 0.0678, within-slope sd 0.0208
+== 2.3 nested OLS on EXPLORE (target: U_loc, U_var, U_tv) ==
+   U_loc  n=8663 | B3 R2=0.0010 rmse=0.1435 | B1 R2=0.0322 rmse=0.1412 | B2 R2=0.0326 rmse=0.1412 | CF R2=0.4295 rmse=0.1084
+   U_var  n=8663 | B3 R2=0.0012 rmse=0.1615 | B1 R2=0.0175 rmse=0.1602 | B2 R2=0.0190 rmse=0.1601 | CF R2=0.5481 rmse=0.1086
+   U_tv   n= 392 | B3 R2=0.0806 rmse=0.0826 | B1 R2=0.1012 rmse=0.0816 | B2 R2=0.1025 rmse=0.0816 | CF R2=0.5464 rmse=0.0580
+== 2.4 does slope IDENTITY still explain residual variance after each model? ==
+   (between-slope variance of residuals / total residual variance; 0 = fully explained)
+   U_loc  B3 0.465 | B1 0.473 | B2 0.473 | CF 0.401
+   U_var  B3 0.626 | B1 0.613 | B2 0.612 | CF 0.648
+   U_tv   B3 0.573 | B1 0.573 | B2 0.573 | CF 0.511
+== 2.5 do CF features correlate with the per-slope residual of the LOCAL-PHASE model? ==
+   U_loc  log max a_k r=+0.157 p=0.511 | log sum a_k r=+0.306 p=0.202 | discrepancy r=-0.090 p=0.764 | theta r=-0.911 p=0.000
+   U_var  log max a_k r=+0.142 p=0.554 | log sum a_k r=+0.300 p=0.209 | discrepancy r=-0.105 p=0.745 | theta r=-0.920 p=0.000
+   U_tv   log max a_k r=-0.119 p=0.599 | log sum a_k r=-0.224 p=0.316 | discrepancy r=+0.009 p=0.972 | theta r=+0.696 p=0.000

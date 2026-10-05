@@ -1,0 +1,46 @@
+EXPLORE windows: 66  (HOLDOUT untouched in this script)
+== 1.7 EXPLORE window table (T1 on eps=1 transitions, T0 on eps=0) ==
+   66 windows ; T1 exact on 5736/5792 eps=1 transitions (0.9903) ; T0 exact on 4108/4108
+   windows with any T1 failure: 28
+== 1.8 residual anatomy (EXPLORE) ==
+   residual shapes: {'all -1': 56}
+   |residual| maxima: {1: 56}   (sign: all negative)
+   -> every failure residual is the constant vector (-1,...,-1) on the compared range
+== 1.9 predictors of T1 success (EXPLORE, eps=1 transitions only) ==
+   convergent denominators q_k = [1, 2, 5, 12, 41, 53, 306, 665]
+   n=5792 transitions ; base rate (always-success) = 0.9903
+   acc=0.9903  always-success (base rate)
+   acc=1.0000  FROZEN RULE: rawl0 >= 0
+   acc=0.1133  M==2 only
+   acc=0.3885  E==1 only
+   acc=0.9755  boring: h >= 6
+   acc=0.9377  boring: h >= 12
+   acc=0.8957  boring: h >= 18
+   acc=0.8579  boring: h >= 24
+   acc=0.8160  boring: h >= 30
+   acc=0.0435  Diophantine: |h-q_k| <= 0
+   acc=0.0843  Diophantine: |h-semiconv| <= 0
+   acc=0.0905  Diophantine: |h-q_k| <= 1
+   acc=0.1847  Diophantine: |h-semiconv| <= 1
+   acc=0.1385  Diophantine: |h-q_k| <= 2
+   acc=0.2878  Diophantine: |h-semiconv| <= 2
+   acc=0.1840  Diophantine: |h-q_k| <= 3
+   acc=0.3633  Diophantine: |h-semiconv| <= 3
+   acc=0.9903  Diophantine: frac(h*beta+gamma_W) in [0.00,1.00) (interval fitted on EXPLORE)
+   all 56 failures have rawl0 <= -1 : True ; min rawl0 among successes = 0
+   h at failures: max 4 ; h_open(M,E)=min{h: rawl0>=0} per class matches exactly
+== 1.10 calibration: how often does a random small integer land near a convergent? ==
+   h in 1.. 20, tol=0 : 20% near a convergent, 35% near a semiconvergent
+   h in 1.. 20, tol=1 : 45% near a convergent, 70% near a semiconvergent
+   h in 1.. 20, tol=2 : 60% near a convergent, 95% near a semiconvergent
+   h in 1.. 50, tol=0 : 10% near a convergent, 18% near a semiconvergent
+   h in 1.. 50, tol=1 : 24% near a convergent, 40% near a semiconvergent
+   h in 1.. 50, tol=2 : 34% near a convergent, 58% near a semiconvergent
+   h in 1..100, tol=0 : 6% near a convergent, 11% near a semiconvergent
+   h in 1..100, tol=1 : 15% near a convergent, 26% near a semiconvergent
+   h in 1..100, tol=2 : 22% near a convergent, 39% near a semiconvergent
+   h in 1..150, tol=0 : 4% near a convergent, 8% near a semiconvergent
+   h in 1..150, tol=1 : 10% near a convergent, 19% near a semiconvergent
+   h in 1..150, tol=2 : 15% near a convergent, 29% near a semiconvergent
+   gap-based criterion: a set of k successes in 1..H has mean gap H/k; for k=16,H=96
+   the mean gap is 6.0, so observing gaps of 5,7,12 is the null expectation, not a signal.

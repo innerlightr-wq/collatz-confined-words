@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+# LaTeX build intermediates
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+!shape/out/*.log
+!out/*.log

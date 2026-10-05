@@ -1,0 +1,33 @@
+{
+ "summary": {
+  "(4,2)": {
+   "rows": 5967,
+   "ties": 98,
+   "largest_tie_r": 9,
+   "tie_free_from_r": 10,
+   "r_min": 1,
+   "r_max": 526
+  },
+  "(7,1)": {
+   "rows": 5989,
+   "ties": 42,
+   "largest_tie_r": 6,
+   "tie_free_from_r": 7,
+   "r_min": 1,
+   "r_max": 527
+  },
+  "(11,2)": {
+   "rows": 5964,
+   "ties": 120,
+   "largest_tie_r": 12,
+   "tie_free_from_r": 13,
+   "r_min": 1,
+   "r_max": 527
+  }
+ },
+ "n_rows": 17920,
+ "spot_checks": 210,
+ "spot_fail": 0,
+ "largest_tie_r_overall": 12,
+ "largest_tie_K_overall": 13
+}

@@ -1,0 +1,13 @@
+== 0.1 reproduce the W0 shape numbers (theta = beta, window (M,E)=(2,1)) ==
+   h   mode  K(h)  S1=mode-K  tied   mean-K     Var/K    (note: 0.068,0.012,-0.002,-0.006 ; 1.659,1.747,1.803,1.843)
+   40    19    20    -1       False  +0.0682   1.6590
+   60    31    32    -1       False  +0.0116   1.7474
+   80    42    43    -1       False  -0.0018   1.8025
+  100    54    55    -1       False  -0.0061   1.8426
+   reproduces the note's values exactly (mode = K-1 untied, mean-K, Var/K): True
+== 0.2 local law T0/T1 for EVERY slope in the test set ==
+   eta=0  (identity)           : 11612/11612 exact
+   eta=1, r>=0  (T1)           : 10318/10318 exact
+   eta=1, r<=-1 (residual -1)  : 85/85 exact
+   slopes x windows x horizons : 37 x 5 x 119 ; exceptions: 0 []
+   -> the LOCAL transition rules carry no arithmetic of theta (VERIFIED over all 37 slopes).

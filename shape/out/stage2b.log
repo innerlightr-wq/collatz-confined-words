@@ -1,0 +1,59 @@
+== 2.6 nested models WITH theta in the baseline (EXPLORE) ==
+   U_loc  n=8663 | B3t R2=0.6590 rmse=0.0838 | B1t R2=0.6968 rmse=0.0790 | B2t R2=0.6971 rmse=0.0790 | CFt R2=0.7043 rmse=0.0781
+   U_var  n=8663 | B3t R2=0.9060 rmse=0.0495 | B1t R2=0.9123 rmse=0.0479 | B2t R2=0.9124 rmse=0.0478 | CFt R2=0.9146 rmse=0.0472
+   U_tv   n= 392 | B3t R2=0.7635 rmse=0.0419 | B1t R2=0.7772 rmse=0.0406 | B2t R2=0.7781 rmse=0.0406 | CFt R2=0.7958 rmse=0.0389
+   (compare with Stage 2.3, where theta was ABSENT and the CF block reached R2 0.43-0.55:
+    that gain was the CF block proxying for theta, not Diophantine structure.)
+== 2.7 CF features vs per-slope residuals of B1t (theta + local phase) ==
+   U_loc  log max a_k r=+0.212 p=0.4021 | log sum a_k r=+0.030 p=0.9083 | discrepancy r=+0.162 p=0.5456 | theta r=-0.120 p=0.6178
+   U_var  log max a_k r=+0.059 p=0.8188 | log sum a_k r=-0.104 p=0.6968 | discrepancy r=+0.100 p=0.8205 | theta r=-0.129 p=0.5906
+   U_tv   log max a_k r=-0.048 p=0.8490 | log sum a_k r=+0.107 p=0.6768 | discrepancy r=-0.073 p=0.6726 | theta r=+0.117 p=0.6343
+== 2.8 sharpest control: RATIONAL vs IRRATIONAL at nearly the same theta ==
+   (rational p/q is maximally non-Diophantine; golden is the hardest to approximate)
+   (rational 8/13 or golden [0;1,1,1,...] is in HOLDOUT -- skipped here)
+   (rational 55/89 or golden [0;1,1,1,...] is in HOLDOUT -- skipped here)
+== 2.9 per-slope means vs theta: is the dependence a smooth curve? ==
+   U_loc:
+      theta=0.192123  random#03                random    mean=-0.2393
+      theta=0.212311  random#12                random    mean=-0.2510
+      theta=0.269497  random#15                random    mean=-0.2488
+      theta=0.302776  [0;3,3,3,...]            bounded   mean=-0.2654
+      theta=0.319801  random#14                random    mean=-0.2667
+      theta=0.368062  random#16                random    mean=-0.2812
+      theta=0.414214  sqrt2-1 [0;2,2,2,...]    bounded   mean=-0.2761
+      theta=0.436114  random#01                random    mean=-0.2929
+      theta=0.436694  random#04                random    mean=-0.2927
+      theta=0.468555  random#00                random    mean=-0.3193
+      theta=0.500499  liouville a_3=500        liouville mean=-0.3300
+      theta=0.530260  random#11                random    mean=-0.3479
+      theta=0.563009  random#13                random    mean=-0.3869
+      theta=0.600781  liouville a_5=50         liouville mean=-0.4398
+      theta=0.615385  rational 8/13            rational  mean=-0.4469
+      theta=0.615500  liouville a_7=50         liouville mean=-0.4469
+      theta=0.617647  rational 21/34           rational  mean=-0.4483
+      theta=0.718282  e-2                      named     mean=-0.6154
+      poly deg 1 in theta: R2=0.8302  residual sd=0.0403
+      poly deg 2 in theta: R2=0.9871  residual sd=0.0111
+      poly deg 3 in theta: R2=0.9964  residual sd=0.0059
+   U_var:
+      theta=0.192123  random#03                random    mean=+1.9619
+      theta=0.212311  random#12                random    mean=+1.9550
+      theta=0.269497  random#15                random    mean=+1.9455
+      theta=0.302776  [0;3,3,3,...]            bounded   mean=+1.9260
+      theta=0.319801  random#14                random    mean=+1.9214
+      theta=0.368062  random#16                random    mean=+1.9002
+      theta=0.414214  sqrt2-1 [0;2,2,2,...]    bounded   mean=+1.8899
+      theta=0.436114  random#01                random    mean=+1.8700
+      theta=0.436694  random#04                random    mean=+1.8700
+      theta=0.468555  random#00                random    mean=+1.8456
+      theta=0.500499  liouville a_3=500        liouville mean=+1.8165
+      theta=0.530260  random#11                random    mean=+1.7875
+      theta=0.563009  random#13                random    mean=+1.7469
+      theta=0.600781  liouville a_5=50         liouville mean=+1.6890
+      theta=0.615385  rational 8/13            rational  mean=+1.6743
+      theta=0.615500  liouville a_7=50         liouville mean=+1.6743
+      theta=0.617647  rational 21/34           rational  mean=+1.6713
+      theta=0.718282  e-2                      named     mean=+1.4607
+      poly deg 1 in theta: R2=0.8769  residual sd=0.0459
+      poly deg 2 in theta: R2=0.9927  residual sd=0.0111
+      poly deg 3 in theta: R2=0.9993  residual sd=0.0034

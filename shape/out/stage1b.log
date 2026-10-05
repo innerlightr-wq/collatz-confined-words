@@ -1,0 +1,22 @@
+EXPLORE rows: 12955 (slopes 18, windows 5, h<=150)
+== 1.6 does the shape collapse as a function of K (baseline B3: one universal curve)? ==
+    K-bin    n   S3=Var/K  mean+-sd        S2r=mean-r  mean+-sd      spread across slopes
+    20- 30  2242   1.8720+-0.1687   -1.9582+-0.8916   per-slope mean S3 spread 0.6710
+    30- 45  2596   1.8791+-0.1426   -2.1879+-0.9438   per-slope mean S3 spread 0.5772
+    45- 60  1859   1.8742+-0.1182   -2.4855+-0.9798   per-slope mean S3 spread 0.4778
+    60- 80  1459   1.8533+-0.0987   -2.9431+-1.0033   per-slope mean S3 spread 0.3769
+    80-120   507   1.7981+-0.0928   -3.7652+-1.0929   per-slope mean S3 spread 0.2334
+== 1.7 ties: where does the Haar mode fail to be unique? ==
+   tied rows: 523 / 12955 (4.037%)
+   by family: {'bounded': 59, 'liouville': 37, 'named': 7, 'random': 392, 'rational': 28}
+   by K: {1: 14, 2: 56, 3: 89, 4: 63, 5: 69, 6: 48, 7: 45, 8: 34, 9: 21, 10: 22, 11: 22, 12: 14, 13: 10, 14: 5, 15: 5, 16: 6}
+   by slope (top 8): [('random#03', 105), ('random#12', 95), ('random#15', 59), ('random#14', 38), ('[0;3,3,3,...]', 34), ('sqrt2-1 [0;2,2,2,...]', 25), ('random#16', 21), ('random#04', 19)]
+   tied rows with K>=20: 0 (of 8663 rows with K>=20)
+== 1.8 mode relative to its own mean (convention-free) ==
+   mode - round(mean), K>=20: {-2: 2811, -1: 5423, 0: 429}
+   S1r = mode - r,      K>=20: {-6: 243, -5: 1271, -4: 2565, -3: 4584}
+== 1.9 S4 / S4m (TV to the negative-binomial kernel) vs K ==
+   K  10- 20  n= 94  S4(study K) 0.0491+-0.0364   S4m(mean-matched) 0.0384+-0.0247
+   K  20- 40  n=169  S4(study K) 0.0330+-0.0269   S4m(mean-matched) 0.0202+-0.0140
+   K  40- 70  n=158  S4(study K) 0.0241+-0.0169   S4m(mean-matched) 0.0177+-0.0115
+   K  70-120  n= 65  S4(study K) 0.0256+-0.0148   S4m(mean-matched) 0.0183+-0.0084

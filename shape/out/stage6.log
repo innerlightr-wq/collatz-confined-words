@@ -1,0 +1,19 @@
+== U_var : single law  f(theta) + a/sqrt(r) + b/r  fitted on EXPLORE (h<=150) ==
+   a = -11.4385, b = +27.2597
+   HOLDOUT h<=150       n= 7545  rmse 0.0579 | per-slope mean resid: +0.0007 +- 0.0043 (max|.| 0.0085)
+   HOLDOUT h=160..400   n= 1875  rmse 0.0754 | per-slope mean resid: -0.1353 +- 0.0453 (max|.| 0.2001)
+   -> one r-correction, shared by every slope, carries the extended horizons:
+== U_loc : single law  f(theta) + a/sqrt(r) + b/r  fitted on EXPLORE (h<=150) ==
+   a = -8.0056, b = +18.1174
+   HOLDOUT h<=150       n= 7545  rmse 0.0914 | per-slope mean resid: +0.0002 +- 0.0069 (max|.| 0.0123)
+   HOLDOUT h=160..400   n= 1875  rmse 0.0618 | per-slope mean resid: -0.0599 +- 0.0227 (max|.| 0.0935)
+   -> one r-correction, shared by every slope, carries the extended horizons:
+== 6.2 r-range actually probed ==
+   EXPLORE r: 19..108 ; HOLDOUT h<=150 r: 19..98 ; HOLDOUT extended r: 31..260
+== 6.3 limiting values implied by the fit (r -> infinity) ==
+   theta=0.200000 : Var/r -> 3.1549
+   theta=0.400000 : Var/r -> 3.0135
+   theta=0.584963 : Var/r -> 2.7734
+   theta=0.618034 : Var/r -> 2.7111
+   theta=0.700000 : Var/r -> 2.5232
+   (at theta -> 0 the fit gives 3.3038; the idealized NB(K,1/2) value is 2)

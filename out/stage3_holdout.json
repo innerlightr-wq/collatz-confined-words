@@ -1,0 +1,287 @@
+[
+ {
+  "name": "HOLDOUT h<=150 margin2",
+  "n": 1317,
+  "pos": 1303,
+  "neg": 14,
+  "P1_errors": 0,
+  "shape_ok": true,
+  "T0": true,
+  "rows": [
+   [
+    "P1: r>=0",
+    1.0,
+    1.0
+   ],
+   [
+    "null: always-success (base rate)",
+    0.9893697798025817,
+    0.5
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=0",
+    0.039483675018982534,
+    0.23193728757811644
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=1",
+    0.09187547456340167,
+    0.046431312356101304
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=2",
+    0.13515565679574792,
+    0.06830391404451266
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=3",
+    0.1829916476841306,
+    0.09247889485801995
+   ],
+   [
+    "null: random-nearby-integers |h-q~|<=1 (mean of 200)",
+    0.0907744874715262,
+    0.11989241859445236
+   ],
+   [
+    "null: random-nearby-integers |h-q~|<=2 (mean of 200)",
+    0.1369855732725892,
+    0.08000452253042428
+   ],
+   [
+    "null-Diophantine: BEST phase interval re-fitted ON THIS SET [0.40,1.00)",
+    0.9893697798025817,
+    NaN
+   ]
+  ],
+  "perm_p": 0.0004997501249375312
+ },
+ {
+  "name": "HOLDOUT h<=150 margin0",
+  "n": 1317,
+  "pos": 1303,
+  "neg": 14,
+  "P1_errors": 0,
+  "shape_ok": true,
+  "T0": true,
+  "rows": [
+   [
+    "P1: r>=0",
+    1.0,
+    1.0
+   ],
+   [
+    "null: always-success (base rate)",
+    0.9893697798025817,
+    0.5
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=0",
+    0.039483675018982534,
+    0.23193728757811644
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=1",
+    0.09187547456340167,
+    0.046431312356101304
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=2",
+    0.13515565679574792,
+    0.06830391404451266
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=3",
+    0.1829916476841306,
+    0.09247889485801995
+   ],
+   [
+    "null: random-nearby-integers |h-q~|<=1 (mean of 200)",
+    0.0907744874715262,
+    0.11989241859445236
+   ],
+   [
+    "null: random-nearby-integers |h-q~|<=2 (mean of 200)",
+    0.1369855732725892,
+    0.08000452253042428
+   ],
+   [
+    "null-Diophantine: BEST phase interval re-fitted ON THIS SET [0.40,1.00)",
+    0.9893697798025817,
+    NaN
+   ]
+  ],
+  "perm_p": 0.0004997501249375312
+ },
+ {
+  "name": "EXPLORE extended h=151..600 margin0",
+  "n": 3948,
+  "pos": 3948,
+  "neg": 0,
+  "P1_errors": 0,
+  "shape_ok": true,
+  "T0": true,
+  "rows": [
+   [
+    "P1: r>=0",
+    1.0,
+    0.5
+   ],
+   [
+    "null: always-success (base rate)",
+    1.0,
+    0.5
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=0",
+    0.0022796352583586625,
+    0.0011398176291793312
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=1",
+    0.006838905775075988,
+    0.003419452887537994
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=2",
+    0.011398176291793313,
+    0.0056990881458966565
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=3",
+    0.015957446808510637,
+    0.007978723404255319
+   ],
+   [
+    "null: random-nearby-integers |h-q~|<=1 (mean of 200)",
+    0.006838905775075987,
+    0.0034194528875379935
+   ],
+   [
+    "null: random-nearby-integers |h-q~|<=2 (mean of 200)",
+    0.011398176291793315,
+    0.005699088145896657
+   ],
+   [
+    "null-Diophantine: BEST phase interval re-fitted ON THIS SET [0.40,1.00)",
+    1.0,
+    NaN
+   ]
+  ],
+  "perm_p": 1.0
+ },
+ {
+  "name": "WIDE M=41..120 h<=120 margin0",
+  "n": 39298,
+  "pos": 37260,
+  "neg": 2038,
+  "P1_errors": 0,
+  "shape_ok": true,
+  "T0": true,
+  "rows": [
+   [
+    "P1: r>=0",
+    1.0,
+    1.0
+   ],
+   [
+    "null: always-success (base rate)",
+    0.9481398544455188,
+    0.5
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=0",
+    0.06656827319456461,
+    0.3475000355563141
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=1",
+    0.10751183266323985,
+    0.212314073399821
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=2",
+    0.15125451676930124,
+    0.17090812669847244
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=3",
+    0.19657488930734388,
+    0.13427680037421047
+   ],
+   [
+    "null: random-nearby-integers |h-q~|<=1 (mean of 200)",
+    0.1093530205099496,
+    0.2364120184687397
+   ],
+   [
+    "null: random-nearby-integers |h-q~|<=2 (mean of 200)",
+    0.1521980762379765,
+    0.17729646275252225
+   ],
+   [
+    "null-Diophantine: BEST phase interval re-fitted ON THIS SET [0.40,1.00)",
+    0.9481398544455188,
+    NaN
+   ]
+  ],
+  "perm_p": 0.0004997501249375312
+ },
+ {
+  "name": "DEEP M=101..110 h<=400 margin0",
+  "n": 7017,
+  "pos": 6987,
+  "neg": 30,
+  "P1_errors": 0,
+  "shape_ok": true,
+  "T0": true,
+  "rows": [
+   [
+    "P1: r>=0",
+    1.0,
+    1.0
+   ],
+   [
+    "null: always-success (base rate)",
+    0.9957246686618213,
+    0.5
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=0",
+    0.014963659683625482,
+    0.20665521683125807
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=1",
+    0.03976058144506199,
+    0.01996565049377415
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=2",
+    0.06284737067122702,
+    0.03155860884499785
+   ],
+   [
+    "null-Diophantine: |h-q_k|<=3",
+    0.08593415989739205,
+    0.043151567196221555
+   ],
+   [
+    "null: random-nearby-integers |h-q~|<=1 (mean of 200)",
+    0.04128402451189968,
+    0.09972334335193932
+   ],
+   [
+    "null: random-nearby-integers |h-q~|<=2 (mean of 200)",
+    0.06312882998432379,
+    0.04323354086160012
+   ],
+   [
+    "null-Diophantine: BEST phase interval re-fitted ON THIS SET [0.40,1.00)",
+    0.9957246686618213,
+    NaN
+   ]
+  ],
+  "perm_p": 0.0004997501249375312
+ }
+]

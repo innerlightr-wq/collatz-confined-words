@@ -1,0 +1,17 @@
+== 0.7 M=3 T1 via the INDEPENDENT DP (no chain-model, no closed forms) ==
+  M=3 E=1 (c=1, prefix (1,1), V_min=4): literal-DP T1 exact on 17/17 eps=1 transitions, h<=30  fails=[]
+  M=3 E=2 (c=1, prefix (1,1), V_min=5): literal-DP T1 exact on 17/17 eps=1 transitions, h<=30  fails=[]
+  M=3 E=3 (c=1, prefix (1,1), V_min=6): literal-DP T1 exact on 16/17 eps=1 transitions, h<=30  fails=[(2, [0])]
+  M=3 E=4 (c=1, prefix (1,1), V_min=7): literal-DP T1 exact on 15/17 eps=1 transitions, h<=30  fails=[(2, [0]), (3, [0, 1])]
+== 0.8 do buggy generalizations reproduce '16 of 56'? ==
+  variant correct    : T1 exact 58/58   success horizons [2, 3, 5, 7, 8, 10, 12, 14, 15, 17, 19, 20, 22, 24]
+                      gaps between successes: [1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2]
+  variant interior1  : T1 exact 58/58   success horizons [2, 3, 5, 7, 8, 10, 12, 14, 15, 17, 19, 20, 22, 24]
+                      gaps between successes: [1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2]
+  variant Mh_is_2h   : T1 exact  0/58   success horizons []
+                      gaps between successes: []
+  variant rho_M2     : T1 exact 58/58   success horizons [2, 3, 5, 7, 8, 10, 12, 14, 15, 17, 19, 20, 22, 24]
+                      gaps between successes: [1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2]
+  variant Vmin4      : T1 exact 58/58   success horizons [2, 3, 5, 7, 8, 10, 12, 14, 15, 17, 19, 20, 22, 24]
+                      gaps between successes: [1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2]
+== 0.9 size of discrepancies for variant 'interior1' (M=3) ==
