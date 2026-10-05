@@ -12,6 +12,13 @@ and its companion
 > Cumulative Multiplicity, and Bulk Resolution Rates*, Zenodo, 2026.
 > [doi:10.5281/zenodo.22096151](https://doi.org/10.5281/zenodo.22096151)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23169264.svg)](https://doi.org/10.5281/zenodo.23169264)
+
+This repository is archived on Zenodo. Cite the **concept DOI**
+[10.5281/zenodo.23169264](https://doi.org/10.5281/zenodo.23169264), which always resolves to the
+latest release; the current release is
+[10.5281/zenodo.23169265](https://doi.org/10.5281/zenodo.23169265) (v1.0.0).
+
 **Nothing here bears on the Collatz conjecture or on any `O(log m)` occupation bound.** Every
 confinement, prune, return and tie decision is an exact integer comparison; floating point appears
 only in descriptive summaries, and is labelled where it does.

@@ -16,4 +16,5 @@ Suggested attribution:
 
 > E. De Jesús, *From Sturmian Capacity to Entropy-Deficit Survival*, Zenodo, 2026,
 > doi:10.5281/zenodo.23167068, with companion computations at
-> https://github.com/innerlightr-wq/collatz-confined-words (CC BY 4.0).
+> https://github.com/innerlightr-wq/collatz-confined-words, doi:10.5281/zenodo.23169264
+> (CC BY 4.0).
