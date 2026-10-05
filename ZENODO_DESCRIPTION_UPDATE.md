@@ -15,9 +15,9 @@ the Diophantine type of the slope. Rational slopes, bounded-type irrationals, ge
 and Liouville-type slopes give the same shape statistics once matched by slope value. The local
 transition law (Theorem C.11) was re-verified exactly for every slope tested.
 
-**Narrowed conjecture.** The weighted profile has a unique maximum for r ≥ 20 and slopes
-θ ≥ 0.1384. This threshold was fixed in advance and confirmed on held-out slopes and windows with
-zero exceptions. Slopes near 0 are not claimed.
+**Narrowed conjecture.** The weighted profile has a unique maximum for r ≥ 20 and θ ≥ 0.1384. The
+threshold was confirmed with zero exceptions on held-out slopes and windows for θ ≥ 0.175, and
+holds without exception in all data down to θ = 0.1384. Slopes near 0 are not claimed.
 
 **The peak location is specific to the Collatz case.** For θ = log₂3 − 1 and the reference window,
 the peak sits at r − 4. This corrects the earlier "K − 1" phrasing, which depended on a choice of
@@ -34,12 +34,15 @@ Code and reports: https://github.com/innerlightr-wq/collatz-confined-words
 
 ## Note on the threshold
 
-The draft said **θ ≥ 0.175**; the text above says **θ ≥ 0.1384**, which is what the committed
-conjecture states. `0.175` is the smallest slope in the *confirmatory re-test* only
-(`new-random#00`); across all three runs the smallest slope tested is `random#19` at
-**θ = 0.138380349690391**, with `pi-3` next at `0.141592654`, and both were tested at `r >= 20`
-with zero ties. `shape/REPORT.md` §7 states the conjecture with
-`theta_min = 0.138380349690391`, so the record and the Zenodo text now agree.
+Both numbers appear, and they mean different things.
+
+`0.175079` (`new-random#00`) is the smallest slope in the **pre-registered confirmatory re-test**,
+so that is how far down the threshold is confirmed *out of sample*. `0.138380349690391`
+(`random#19`, with `pi-3` next at `0.141592654`) is the smallest slope **tested at all**; both
+satisfy `r >= 20` with zero ties, but both were in the dataset used to choose the threshold — they
+are where the earlier `K >= 17` prediction broke — so at the low edge the evidence is consistency,
+not out-of-sample confirmation. The bullet above states each separately. `shape/REPORT.md` §7
+carries the same distinction in its Scope paragraph.
 
 ## Supporting figures, for anyone who checks
 

@@ -26,12 +26,18 @@ only in descriptive summaries, and is labelled where it does.
 | Scalar reduction `Pi_h = T1^{K(h)} Pi_{h0}` on its base range `j <= h0` | **PROVED**; does *not* extend above `h0` |
 | A reported failure of window-universality ("16 of 56", gaps 5, 7, 12) | **WITHDRAWN** — indexing artifact, reconstructed exactly |
 | Global shape does not depend on the Diophantine type of the slope | **VERIFIED** on held-out data against a pre-registration |
-| Unique maximum of the weighted profile for `r >= 20`, slopes `θ >= 0.1384` | **CONJECTURE**; threshold frozen in advance, 0 exceptions |
+| Unique maximum of the weighted profile for `r >= 20`, slopes `θ >= 0.1384` | **CONJECTURE**; threshold confirmed out of sample for `θ >= 0.175`, and consistent without exception in all data down to `θ = 0.1384` |
 | Peak location `r - 4` | specific to `θ = log2 3 - 1` and the reference window; corrects the convention-dependent "`K - 1`" |
 | Ties caused by near-balance | **REJECTED** |
 | Fixed-modulus 2-adic exclusion of ties | **ROUTE CLOSED** |
 
 Details, with effect sizes and permutation p-values, in the reports below.
+
+On the threshold: the pre-registered confirmatory run reached down to `θ = 0.175`, so that is how
+far `r >= 20` is confirmed *out of sample*. The two slopes below it — `random#19` at `θ = 0.1384`
+and `pi-3` at `0.1416` — were in the data used to choose the threshold, and are where an earlier
+`K >= 17` prediction broke, so at the low edge the evidence is consistency rather than
+confirmation. `shape/REPORT.md` §7 states both.
 
 ## Layout
 

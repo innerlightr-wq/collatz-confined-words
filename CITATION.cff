@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: >-
+  If you use this repository or its results, please cite both the repository and
+  the note it supports.
+title: >-
+  Confined accelerated-Collatz words — companion computations
+abstract: >-
+  Exact-arithmetic computations, pre-registrations and reports supporting the
+  confined accelerated-Collatz word studies: the reduction of the checkpoint
+  decision tree to a staircase-constrained lattice-path count, slope-independence
+  of the global shape of the weighted profile, and two closed proof routes for the
+  uniqueness of its maximum. Every confinement, prune, return and tie decision is
+  an exact integer comparison.
+type: software
+authors:
+  - family-names: "De Jesús"
+    given-names: "Elias"
+    orcid: "https://orcid.org/0009-0007-0190-9143"
+version: "1.0.0"
+date-released: "2026-10-05"
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/innerlightr-wq/collatz-confined-words"
+keywords:
+  - Collatz
+  - Sturmian words
+  - Beatty sequences
+  - lattice paths
+  - exact enumeration
+  - reproducible research
+references:
+  - type: article
+    title: >-
+      From Sturmian Capacity to Entropy-Deficit Survival: Exact Enumeration and
+      Large Deviations in Confined Accelerated Collatz Words
+    authors:
+      - family-names: "De Jesús"
+        given-names: "Elias"
+        orcid: "https://orcid.org/0009-0007-0190-9143"
+    year: 2026
+    doi: "10.5281/zenodo.23167068"
+  - type: article
+    title: >-
+      A Sturmian Complexity Clock in Accelerated Collatz Words: Beatty Thresholds,
+      Cumulative Multiplicity, and Bulk Resolution Rates
+    authors:
+      - family-names: "De Jesús"
+        given-names: "Elias"
+        orcid: "https://orcid.org/0009-0007-0190-9143"
+    year: 2026
+    doi: "10.5281/zenodo.22096151"

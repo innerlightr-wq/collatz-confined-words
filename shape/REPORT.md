@@ -219,7 +219,18 @@ combinatorial problem with no arithmetic in it. Stated over the slope range actu
 (main study) and `{(4,2), (7,1), (11,2)}` (confirmatory re-test), `r` from 1 to 527 and horizons
 `h` from 1 to 600. Of these, **36,863 rows have `r >= 20` and none has a tie**. The threshold
 `r >= 20` was frozen in this section before the confirmatory run of §7b and held there with
-**0 ties** in 16,366 rows. The largest `r` at which any tie was observed is **17**, in the main
+**0 ties** in 16,366 rows.
+
+**Confirmed versus consistent.** The confirmatory run of §7b reached down only to
+`theta = 0.175079` (`new-random#00`), so `r >= 20` is confirmed *out of sample* for
+`theta >= 0.175`. The two slopes below that, `random#19` (`theta = 0.1384`) and `pi-3`
+(`theta = 0.1416`), were in the dataset used to *choose* the threshold — they are precisely where
+the earlier `K >= 17` prediction broke — so at the low edge `r >= 20` is consistent with all data
+but was not confirmed out of sample. The conjecture is stated for `theta >= theta_min` because it
+holds without exception throughout; the distinction is recorded here rather than hidden in the
+threshold.
+
+The largest `r` at which any tie was observed is **17**, in the main
 study (slopes `random#19` and `pi-3`); in the confirmatory run alone the largest was **12**. Ties
 concentrate at the smallest slopes tested — the two slopes attaining a tie at `r = 17` are the two
 smallest, `theta = 0.1384` and `theta = 0.1416` — so the threshold may well grow as `theta -> 0`,
