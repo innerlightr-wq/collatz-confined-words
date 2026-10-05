@@ -18,9 +18,9 @@ authors:
     orcid: "https://orcid.org/0009-0007-0190-9143"
 version: "1.0.0"
 date-released: "2026-10-05"
-license:
-  - MIT
-  - CC-BY-4.0
+license: MIT
+# Code is MIT; the reports, notes and figures are CC BY 4.0 (see LICENSE-DOCS.md).
+# A single scalar is used here because Zenodo's CFF importer expects one.
 repository-code: "https://github.com/innerlightr-wq/collatz-confined-words"
 keywords:
   - Collatz

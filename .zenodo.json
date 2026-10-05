@@ -1,0 +1,37 @@
+{
+  "title": "Confined accelerated-Collatz words — companion computations",
+  "description": "<p>Exact-arithmetic computations, pre-registrations and reports supporting the confined accelerated-Collatz word studies: the reduction of the checkpoint decision tree to a staircase-constrained lattice-path count, slope-independence of the global shape of the weighted profile, and two closed proof routes for the uniqueness of its maximum.</p><p>Every confinement, prune, return and tie decision is an exact integer comparison. Each study froze its predictions in a pre-registration committed before the held-out computation, and the reports state where those frozen predictions failed as well as where they held.</p><p>No claim here bears on the Collatz conjecture or on any O(log m) occupation bound.</p>",
+  "upload_type": "software",
+  "license": "mit",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "De Jesús, Elias",
+      "orcid": "0009-0007-0190-9143",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "keywords": [
+    "Collatz",
+    "Sturmian words",
+    "Beatty sequences",
+    "lattice paths",
+    "exact enumeration",
+    "reproducible research",
+    "pre-registration"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23167068",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22096151",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    }
+  ]
+}
